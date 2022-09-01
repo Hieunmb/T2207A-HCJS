@@ -1,0 +1,27 @@
+div{
+    width: 500px;
+    font-weight: normal;
+    font-size: 12px;
+    float:left;
+}
+div p.dp{
+    font-weight: bold;
+    font-size:25px;
+}
+#CV{
+    width: 500px;
+}
+.title{
+    width: 850px;
+    border-bottom: 1px solid black;
+    float: bottom;
+    font-weight: bold;
+}
+.cp{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.time{
+    font-weight: bold;
+    font-style: italic;
+}
