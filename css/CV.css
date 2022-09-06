@@ -1,8 +1,12 @@
+
 div{
-    width: 500px;
+    width: 60%;
     font-weight: normal;
     font-size: 12px;
     float:left;
+}
+img{
+    width: 20%;
 }
 div p.dp{
     font-weight: bold;
