@@ -6,7 +6,7 @@
 body{
     background-color: #fafafa;
     font-size: 15px;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     text-align: left;
     font-weight: 400;
     line-height: 1.35;
@@ -45,4 +45,7 @@ div {
     padding-right: 50px;
     padding-left: 53px;
     color: gray;
+}
+form{
+    background-color: white;
 }
