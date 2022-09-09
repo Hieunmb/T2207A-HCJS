@@ -38,6 +38,11 @@ div {
     width: 100%;
     line-height: 40px;
 }
-.ip{
+.ip {
     color: red;
+}
+.under{
+    padding-right: 50px;
+    padding-left: 53px;
+    color: gray;
 }
