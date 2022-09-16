@@ -25,4 +25,34 @@ function demo() {
     x.style.transform='rotate('+f+'deg)';
     f+=1;
 }
-setInterval(demo,15);
+function quayTron(){
+    setInterval(demo, 15);
+}
+var a=10;
+var b=0;
+function countdown() {
+    if (a == 0 && b == 0) {
+        clearInterval(at);
+        console.log(a);
+        console.log(b);
+        h.innerText = a;
+        m.innerText = b;
+    }
+    b--;
+    if (b<0) {
+        if(a>0){
+        a = a - 1;
+        }
+        b = 59;
+    }
+    var h = document.getElementById("min");
+    var m = document.getElementById("sec");
+    h.innerText = a;
+    m.innerText = b;
+}
+var at;
+function count() {
+    if (a > 0) {
+        at = setInterval(countdown, 2);
+    }
+}

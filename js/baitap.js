@@ -11,7 +11,7 @@ function demo() {
         console.log(a);
         console.log(b);
         b--;
-        if(a==0&&b==0){
+        if(a==0&&b==1){
             clearInterval(at);
             console.log(a);
             console.log(b);
