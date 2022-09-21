@@ -15,7 +15,7 @@ function getMenu(){
       var ls=data.data;
       for(var i=0;i<ls.length;i++){
           /// 1 object
-          var li_html=`<li>${ls[i].id}<img src="${ls[i].icon}"/> ${ls[i].name}</li>`;
+          var li_html=`<li>${ls[i].id}<img width="50" src="${ls[i].icon}"/> ${ls[i].name}</li>`;
           var menu=document.getElementById("menu");
           menu.innerHTML+=li_html;
       }
