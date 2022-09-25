@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+  <link rel="stylesheet" href="libs/bootstrap5.2.1/css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <div class="row" id="ls">
+
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  var xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    var list = JSON.parse(this.responseText);
+    var ls = list.list;
+    for (var i = 0; i < ls.length; i++) {
+      var li_html = `<div class="col-3">
+        <div class="card mb-3 mt-1">
+          <img src="http://openweathermap.org/img/wn/${ls[i].weather[0].icon}@2x.png" class="card-img-top" alt="..."/>
+          <div class="card-body">
+            <h5 class="card-title">${ls[i].dt_txt}</h5>
+            <p class="card-text">${ls[i].main.temp}</p>
+            <h5 class="card-title">${ls[i].weather[0].description}</h5>
+          </div>
+        </div>
+      </div>`;
+      var ds = document.getElementById("ls");
+      ds.innerHTML += li_html;
+    }
+  }
+  var url = "https://api.openweathermap.org/data/2.5/forecast?q=Hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric";
+  xhttp.open("GET", url, true);
+  xhttp.send();
+</script>
+</body>
+</html>
