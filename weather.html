@@ -20,13 +20,13 @@
     var list = JSON.parse(this.responseText);
     var ls = list.list;
     for (var i = 0; i < ls.length; i++) {
-      var li_html = `<div class="col-3">
+      var li_html = `<div class="col-3" xmlns="http://www.w3.org/1999/html">
         <div class="card mb-3 mt-1">
-          <img src="http://openweathermap.org/img/wn/${ls[i].weather[0].icon}@2x.png" class="card-img-top" alt="..."/>
           <div class="card-body">
             <h5 class="card-title">${ls[i].dt_txt}</h5>
-            <p class="card-text">${ls[i].main.temp}</p>
-            <h5 class="card-title">${ls[i].weather[0].description}</h5>
+            <p>${ls[i].main.temp}<sup>o</sup>C</p>
+            <img src="http://openweathermap.org/img/wn/${ls[i].weather[0].icon}@2x.png" style="float: right" alt="..."/>
+            <p>${ls[i].weather[0].description}</p>
           </div>
         </div>
       </div>`;
